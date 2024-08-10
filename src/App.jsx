@@ -2,6 +2,7 @@ import React from "react";
 import { Homepage, Blog, PostPage } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import useFetch from "./hooks/useFetch";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/posts?populate=*`;
@@ -11,6 +12,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <Routes>
         <Route path="/" element={<Homepage posts={data ? data : ""} />}></Route>
         <Route path="/blog" element={<Blog posts={data ? data : ""} />}></Route>
