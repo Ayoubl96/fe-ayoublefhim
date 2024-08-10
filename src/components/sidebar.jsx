@@ -3,9 +3,8 @@ import useFetch from "../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
 
 const Sidebar = () => {
-  let { loading, data, error } = useFetch(
-    "http://localhost:1337/api/sidebar?populate=*",
-  );
+  const apiUrl = `${import.meta.env.VITE_API_URL}api/sidebar?populate=*`;
+  let { loading, data, error } = useFetch(apiUrl);
   if (loading) return <p>Loading</p>;
   if (error) return <p> {error} </p>;
 
