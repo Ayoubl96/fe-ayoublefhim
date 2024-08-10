@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 
 const Sidebar = () => {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/sidebar?populate=*`;
+  console.log(apiUrl);
   let { loading, data, error } = useFetch(apiUrl);
   if (loading) return <p>Loading</p>;
   if (error) return <p> {error} </p>;
