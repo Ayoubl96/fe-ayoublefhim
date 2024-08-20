@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar, Sidebar, Lastpost, Footer } from "../components/";
 import Section from "../components/section";
 
