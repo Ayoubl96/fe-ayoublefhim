@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../hooks/formatDate";
 
 const Lastpost = ({ posts }) => {
-  console.log(posts);
-
   return (
     <section className="lastposts py-4">
       {posts.data.slice(0, 5).map((post) => {

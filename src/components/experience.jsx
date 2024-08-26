@@ -24,11 +24,11 @@ const Experience = () => {
             key={`${job.id}-${index}`} // Changed key to be more unique
             className="grid py-2 lg:grid-cols-12 border-b border-black"
           >
-            <div className="lg:col-span-2">{job.attributes.year}</div>
+            <div className="lg:col-span-4">{job.attributes.year}</div>
             <div className="lg:col-span-6 font-semibold text-black">
               {job.attributes.role}
             </div>
-            <div className="lg:col-span-4 justify-self-end">
+            <div className="lg:col-span-2 justify-self-end">
               {job.attributes.company}
             </div>
           </div>
@@ -39,3 +39,6 @@ const Experience = () => {
 };
 
 export default Experience;
+
+
+
