@@ -1,5 +1,5 @@
 import React from "react";
-import { Homepage, Blog, PostPage } from "./pages";
+import { Homepage, Blog, PostPage, Agenda } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import useFetch from "./hooks/useFetch";
 import { Analytics } from "@vercel/analytics/react";
@@ -16,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Homepage posts={data ? data : ""} />}></Route>
         <Route path="/blog" element={<Blog posts={data ? data : ""} />}></Route>
+        <Route path="/agenda" element={<Agenda />}></Route>
         <Route
           path="/post/:id"
           element={<PostPage posts={data ? data : ""} />}

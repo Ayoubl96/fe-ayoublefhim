@@ -6,6 +6,7 @@ import Posts from "./posts";
 import Post from "./post";
 import Experience from "./experience";
 import Agenda from "./agendas";
+import Agenda_loop from "./agenda_loop.jsx";
 
 export { Navbar };
 export { Sidebar };
@@ -15,4 +16,4 @@ export { Posts };
 export { Post };
 export { Experience }
 export { Agenda }
-
+export { Agenda_loop }

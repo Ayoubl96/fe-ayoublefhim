@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../hooks/formatDate";
 import useFetch from "../hooks/useFetch";
 
-const Agenda = () => {
+const Agenda_loops = () => {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/agendas?populate=*`;
   let { loading, data, error } = useFetch(apiUrl);
 
@@ -16,29 +16,29 @@ const Agenda = () => {
 
   const agendas = data.data;
   return (
-    <section className="lastposts py-4">
-      {agendas.slice(0, 5).map((agendas) => {
-        const formattedDate = formatDate(agendas.attributes.createdAt); // Correct placement of variable
-
+    <>
+      {agendas.map((agendas) => {
+        // Format the date before rendering it
+        const formattedDate = formatDate(agendas.attributes.createdAt);
         return (
           <div
-            key={agendas.attributes.week}
-            className="w-full grid py-2 lg:grid-cols-12 border-b border-slate-500"
+            key={agendas.id} // Use post.id as the key for better uniqueness
+            className="w-full grid py-2 lg:grid-cols-12 border-b"
           >
-            <div className="lg:order-2 lg:col-span-3 lg:justify-self-end">
+            <div className="lg:col-span-2 lg:order-3 lg:place-self-end">
               {formattedDate}
             </div>
             <Link
-              to={"/agenda/" + agendas.id}
-              className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1"
+              to={`/agenda/${agendas.id}`}
+              className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1"
             >
               {agendas.attributes.week}
             </Link>
           </div>
         );
       })}
-    </section>
+    </>
   );
 };
 
-export default Agenda;
+export default Agenda_loops;
