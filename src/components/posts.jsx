@@ -33,7 +33,7 @@ const Posts = ({ posts }) => {
               {formattedDate}
             </div>
             <Link
-              to={`/post/${post.id}`}
+              to={`/post/${post.id}/${post.attributes.title}`}
               className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1"
             >
               {post.attributes.title}

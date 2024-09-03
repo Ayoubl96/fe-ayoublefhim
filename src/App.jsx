@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/blog" element={<Blog posts={data ? data : ""} />}></Route>
         <Route path="/agenda" element={<Agenda />}></Route>
         <Route
-          path="/post/:id"
+          path="/post/:id/:title"
           element={<PostPage posts={data ? data : ""} />}
         ></Route>
       </Routes>

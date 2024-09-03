@@ -17,7 +17,7 @@ const Lastpost = ({ posts }) => {
               {formattedDate}
             </div>
             <Link
-              to={"/post/" + post.id}
+              to={"/post/" + post.id + "/" + post.attributes.title}
               className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1"
             >
               {post.attributes.title}
