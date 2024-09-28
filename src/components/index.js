@@ -8,6 +8,7 @@ import Experience from "./experience";
 import Agenda from "./agendas";
 import Agenda_loop from "./agenda_loop.jsx";
 import SEO from "./meta.jsx"
+import Agendasingle from "./agenda.jsx"
 
 export { Navbar };
 export { Sidebar };
@@ -19,3 +20,4 @@ export { Experience }
 export { Agenda }
 export { Agenda_loop }
 export { SEO }
+export { Agendasingle }

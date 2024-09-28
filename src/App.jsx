@@ -3,6 +3,7 @@ import { Homepage, Blog, PostPage, Agenda } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import useFetch from "./hooks/useFetch";
 import { Analytics } from "@vercel/analytics/react";
+import AgendaPage from "./pages/AgendaPage.jsx";
 
 export default function App() {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/posts?populate=*`;
@@ -20,6 +21,10 @@ export default function App() {
         <Route
           path="/post/:id/:title"
           element={<PostPage posts={data ? data : ""} />}
+        ></Route>
+        <Route
+          path="/agenda/:id/"
+          element={<AgendaPage />}
         ></Route>
       </Routes>
     </>
