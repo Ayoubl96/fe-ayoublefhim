@@ -19,7 +19,7 @@ const Agenda_loops = () => {
     <>
       {agendas.map((agendas) => {
         // Format the date before rendering it
-        const formattedDate = formatDate(agendas.attributes.createdAt);
+        const formattedDate = formatDate(agendas.createdAt);
         return (
           <div
             key={agendas.id} // Use post.id as the key for better uniqueness
@@ -32,7 +32,7 @@ const Agenda_loops = () => {
               to={`/agenda/${agendas.id}`}
               className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1"
             >
-              {agendas.attributes.week}
+              {agendas.week}
             </Link>
           </div>
         );

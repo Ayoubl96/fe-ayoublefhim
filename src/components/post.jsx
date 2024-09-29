@@ -19,7 +19,7 @@ const Post = ({ posts }) => {
     content,
     SEO: seo,
     categories
-  } = post.attributes || {}; // Handle case where attributes might be undefined
+  } = post || {}; // Handle case where attributes might be undefined
 
   const tags = categories?.data || [];
 
@@ -37,7 +37,7 @@ const Post = ({ posts }) => {
       <article className="mt-36 prose prose-sm md:prose-base mx-auto">
         <h1 className="text-xl">{title}</h1>
         <img
-          src={coverImg?.data?.attributes?.url}
+          src={coverImg?.formats?.large?.url}
           alt={title || 'Cover image'}
           className="w-full h-auto"
         />
@@ -48,7 +48,7 @@ const Post = ({ posts }) => {
                 key={tag.id} 
                 className="text-xs font-bold uppercase bg-primary text-white p-1 rounded"
               >
-                {tag.attributes.category_name}
+                {tag.category_name}
               </span>
             ))}
           </div>

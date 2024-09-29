@@ -17,29 +17,29 @@ const Sidebar = () => {
     <header className="lg:self-start lg:sticky lg:col-span-3 lg:top-10">
       <img
         className="rounded-full mt-10 shadow-xl"
-        src={sidebarInfo.data.attributes.avatar.data.attributes.url}
+        src={sidebarInfo.data.avatar.url}
         width="150"
         height="150"
         alt="avatar"
       ></img>
 
       <p className="py-2 text-xl mt-5 font-black text-black">
-        {sidebarInfo.data.attributes.jobtitle}{" "}
+        {sidebarInfo.data.jobtitle}{" "}
         <span className="text-primary">
-          @{sidebarInfo.data.attributes.current_company}
+          @{sidebarInfo.data.current_company}
         </span>
       </p>
-      <ReactMarkdown>{sidebarInfo.data.attributes.short_desc}</ReactMarkdown>
+      <ReactMarkdown>{sidebarInfo.short_desc}</ReactMarkdown>
 
       <a
-        href={sidebarInfo.data.attributes.linkedin_url}
+        href={sidebarInfo.data.linkedin_url}
         target="_blank"
         className="flex pt-6 font-semibold text-black transition hover:text-primary"
       >
         Linkedin &#8594;
       </a>
       <a
-        href={sidebarInfo.data.attributes.mail_url}
+        href={sidebarInfo.data.mail_url}
         className="flex py-3 font-semibold text-black transition hover:text-primary"
       >
         Mail &#8594;

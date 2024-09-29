@@ -32,13 +32,13 @@ const Agendasingle = () => {
   return (
     <>
       <SEO
-        title={agenda.attributes.SEO.meta_title}
-        description={agenda.attributes.SEO.meta_description}
+        title={agenda.SEO.meta_title}
+        description={agenda.SEO.meta_description}
         type='article'
       />
       <article className="mt-36 prose prose-sm md:prose-base mx-auto">
-        <h1 className="text-xl">{agenda.attributes.week}</h1>
-        <ReactMarkdown>{agenda.attributes.content}</ReactMarkdown>
+        <h1 className="text-xl">{agenda.week}</h1>
+        <ReactMarkdown>{agenda.content}</ReactMarkdown>
       </article>
     </>
   );
