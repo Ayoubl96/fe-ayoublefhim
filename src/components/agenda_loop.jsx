@@ -25,12 +25,12 @@ const Agenda_loops = () => {
             key={agendas.id} // Use post.id as the key for better uniqueness
             className="w-full grid py-2 lg:grid-cols-12 border-b"
           >
-            <div className="lg:col-span-2 lg:order-3 lg:place-self-end">
+            <div className="lg:col-span-2 lg:order-3 lg:place-self-end  dark:text-white">
               {formattedDate}
             </div>
             <Link
               to={`/agenda/${agendas.id}`}
-              className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1"
+              className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1  dark:text-white"
             >
               {agendas.week}
             </Link>

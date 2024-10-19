@@ -14,7 +14,7 @@ const Sidebar = () => {
   console.log(sidebarInfo);
 
   return (
-    <header className="lg:self-start lg:sticky lg:col-span-3 lg:top-10">
+    <header className="lg:self-start lg:sticky lg:col-span-3 lg:top-10 dark:text-white">
       <img
         className="rounded-full mt-10 shadow-xl"
         src={sidebarInfo.data.avatar.url}
@@ -23,9 +23,9 @@ const Sidebar = () => {
         alt="avatar"
       ></img>
 
-      <p className="py-2 text-xl mt-5 font-black text-black">
+      <p className="py-2 text-xl mt-5 font-black text-black dark:text-white">
         {sidebarInfo.data.jobtitle}{" "}
-        <span className="text-primary">
+        <span className="text-primary dark:text-white">
           @{sidebarInfo.data.current_company}
         </span>
       </p>
@@ -34,13 +34,13 @@ const Sidebar = () => {
       <a
         href={sidebarInfo.data.linkedin_url}
         target="_blank"
-        className="flex pt-6 font-semibold text-black transition hover:text-primary"
+        className="flex pt-6 font-semibold text-black transition hover:text-primary dark:text-white"
       >
         Linkedin &#8594;
       </a>
       <a
         href={sidebarInfo.data.mail_url}
-        className="flex py-3 font-semibold text-black transition hover:text-primary"
+        className="flex py-3 font-semibold text-black transition hover:text-primary dark:text-white"
       >
         Mail &#8594;
       </a>

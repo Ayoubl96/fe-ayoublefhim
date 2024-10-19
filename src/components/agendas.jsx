@@ -25,12 +25,12 @@ const Agenda = () => {
             key={agendas.week}
             className="w-full grid py-2 lg:grid-cols-12 border-b border-slate-500"
           >
-            <div className="lg:order-2 lg:col-span-3 lg:justify-self-end">
+            <div className="lg:order-2 lg:col-span-3 lg:justify-self-end  dark:text-white">
               {formattedDate}
             </div>
             <Link
               to={"/agenda/" + agendas.id}
-              className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1"
+              className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1  dark:text-white"
             >
               {agendas.week}
             </Link>

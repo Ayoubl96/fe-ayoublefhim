@@ -16,7 +16,7 @@ const Experience = () => {
   const jobs = data.data;
 
   return (
-    <section className="experience py-4">
+    <section className="experience py-4  dark:text-white">
       {jobs.map((job, index) => {
         // Use index as part of the key to ensure uniqueness
         return (
@@ -25,7 +25,7 @@ const Experience = () => {
             className="grid py-2 lg:grid-cols-12 border-b border-black"
           >
             <div className="lg:col-span-4">{job.year}</div>
-            <div className="lg:col-span-6 font-semibold text-black">
+            <div className="lg:col-span-6 font-semibold ">
               {job.role}
             </div>
             <div className="lg:col-span-2 justify-self-end">

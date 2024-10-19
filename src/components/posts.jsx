@@ -29,7 +29,7 @@ const Posts = ({ posts }) => {
                 </div>
               )}
             </div>
-            <div className="lg:col-span-2 lg:order-3 lg:place-self-end">
+            <div className="lg:col-span-2 lg:order-3 lg:place-self-end  dark:text-white">
               {formattedDate}
             </div>
             <Link
