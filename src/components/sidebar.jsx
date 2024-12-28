@@ -11,7 +11,6 @@ const Sidebar = () => {
 
   const sidebarInfo = data;
 
-  console.log(sidebarInfo);
 
   return (
     <header className="lg:self-start lg:sticky lg:col-span-3 lg:top-10 dark:text-white">
@@ -29,7 +28,9 @@ const Sidebar = () => {
           @{sidebarInfo.data.current_company}
         </span>
       </p>
-      <ReactMarkdown>{sidebarInfo.short_desc}</ReactMarkdown>
+      <div className="prose prose-sm md:prose-base dark:prose-invert">
+        <ReactMarkdown>{sidebarInfo.data.short_desc}</ReactMarkdown>
+      </div>
 
       <a
         href={sidebarInfo.data.linkedin_url}
