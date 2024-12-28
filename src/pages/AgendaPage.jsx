@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar, Footer, Agendasingle, SEO } from "../components/";
 
 const Agendapage = () => {

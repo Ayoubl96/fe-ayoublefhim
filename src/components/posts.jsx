@@ -1,11 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { formatDate } from "../hooks/formatDate";
 
+// eslint-disable-next-line react/prop-types
 const Posts = ({ posts }) => {
   return (
     <>
-      {posts.data.map((post) => {
+      {//eslint-disable-next-line react/prop-types
+      posts.data.map((post) => {
         // Format the date before rendering it
         const formattedDate = formatDate(post.createdAt);
         const tags = post.categories || [];

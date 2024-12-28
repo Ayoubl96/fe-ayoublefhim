@@ -1,5 +1,6 @@
 import { Navbar, Sidebar, Lastpost, Footer, Agenda, Experience } from "../components/";
 import Section from "../components/section";
+// eslint-disable-next-line react/prop-types
 const Homepage = ({ posts }) => {
   return (
     <>

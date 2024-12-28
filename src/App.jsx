@@ -1,4 +1,3 @@
-import React from "react";
 import { Homepage, Blog, PostPage, Agenda } from "./pages";
 import { Routes, Route } from "react-router-dom";
 import useFetch from "./hooks/useFetch";

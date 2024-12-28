@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <div className="flex justify-between mt-20 py-5 border-t  dark:text-white">
