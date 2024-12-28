@@ -13,7 +13,6 @@ const Blog = ({ posts }) => {
       <Navbar />
       <main className="flex flex-col mt-36">
         <h1 className="text-2xl font-bold text-black dark:text-white">All posts</h1>
-        <div className="flex mt-5 gap-1 dark:text-white">Tag Filter</div>
         <section className="py-10">
           <Posts posts={posts ? posts : ""} />
         </section>
