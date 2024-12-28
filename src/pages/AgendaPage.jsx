@@ -4,9 +4,9 @@ const Agendapage = () => {
   return (
     <>
       <SEO
-        title='Learning React Helmet!'
-        description='Beginner friendly page for learning React Helmet.'
-        name='Company name.'
+        title='Ayoub Lefhim - Product Manager & Tech Enthusiast'
+        description='Ayoub Lefhim - Product Manager & Tech Enthusiast. My agenda page'
+        name='Ayoub Lefhim'
         type='article'
       />
       <Navbar />
