@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 export default function Section({ title, children }) {
   return (
     <section className="mb-10">

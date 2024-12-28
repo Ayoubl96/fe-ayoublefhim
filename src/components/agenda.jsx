@@ -20,7 +20,7 @@ const Agendasingle = () => {
 
   if (!data || !data.data || !Array.isArray(data.data) || !agenda) {
     return (
-      <article class="mt-36 prose prose-sm md:prose-base mx-auto">
+      <article className="mt-36 prose prose-sm md:prose-base mx-auto">
         <p>Page not found</p>
         </article>
     )

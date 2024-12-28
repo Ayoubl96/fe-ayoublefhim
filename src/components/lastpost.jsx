@@ -1,13 +1,13 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { formatDate } from "../hooks/formatDate";
 
-const Lastpost = ({ posts }) => {
+ 
+function Lastpost({ posts }) {
   return (
     <section className="lastposts py-4">
       {posts.data.slice(0, 5).map((post) => {
         const formattedDate = formatDate(post.createdAt); // Correct placement of variable
-
         return (
           <div
             key={post.title}
@@ -27,6 +27,6 @@ const Lastpost = ({ posts }) => {
       })}
     </section>
   );
-};
+}
 
 export default Lastpost;

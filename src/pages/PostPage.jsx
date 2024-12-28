@@ -1,6 +1,6 @@
-import React from "react";
 import { Navbar, Footer, Post } from "../components/";
 
+// eslint-disable-next-line react/prop-types
 const PostPage = ({ posts }) => {
   return (
     <>

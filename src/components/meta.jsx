@@ -24,4 +24,5 @@ SEO.propTypes = {
   type: PropTypes.string.isRequired,
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default SEO
