@@ -21,7 +21,7 @@ const Post = ({ posts }) => {
     categories
   } = post || {}; // Handle case where attributes might be undefined
 
-  const tags = categories?.data || [];
+  const tags = categories || [];
 
   if (!post.id) {
     return <p>Post not found</p>;
@@ -35,7 +35,7 @@ const Post = ({ posts }) => {
         type='article'
       />
       <article className="mt-36 prose prose-sm md:prose-base mx-auto">
-        <h1 className="text-xl">{title}</h1>
+        <h1 className="text-xl dark:text-white">{title}</h1>
         <img
           src={coverImg?.formats?.large?.url}
           alt={title || 'Cover image'}
@@ -53,7 +53,9 @@ const Post = ({ posts }) => {
             ))}
           </div>
         )}
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <div className="prose prose-sm md:prose-base mx-auto dark:prose-invert mt-2">
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
       </article>
     </>
   );
@@ -79,14 +81,8 @@ Post.propTypes = {
             meta_description: PropTypes.string
           }),
           categories: PropTypes.shape({
-            data: PropTypes.arrayOf(
-              PropTypes.shape({
                 id: PropTypes.string.isRequired, // Assuming categories' IDs are strings
-                attributes: PropTypes.shape({
-                  category_name: PropTypes.string.isRequired
-                }).isRequired
-              })
-            ).isRequired
+                category_name: PropTypes.string.isRequired
           }).isRequired
         }).isRequired
       }).isRequired

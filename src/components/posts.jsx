@@ -8,7 +8,7 @@ const Posts = ({ posts }) => {
       {posts.data.map((post) => {
         // Format the date before rendering it
         const formattedDate = formatDate(post.createdAt);
-        const tags = post.categories.data || [];
+        const tags = post.categories || [];
 
         return (
           <div
@@ -21,7 +21,7 @@ const Posts = ({ posts }) => {
                   {tags.map((tag) => (
                     <span
                       key={tag.id} // Ensure unique key for each tag
-                      className="text-xs font-bold uppercase bg-primary text-white p-1 rounded"
+                      className="text-xs font-bold uppercase bg-primary text-white p-1 rounded dark:text-white"
                     >
                       {tag.category_name}
                     </span>
@@ -34,7 +34,7 @@ const Posts = ({ posts }) => {
             </div>
             <Link
               to={`/post/${post.id}/${post.title}`}
-              className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1"
+              className="lg:col-span-8 font-semibold text-black lg:order-1 transition hover:text-primary hover:translate-x-1 dark:text-white"
             >
               {post.title}
             </Link>

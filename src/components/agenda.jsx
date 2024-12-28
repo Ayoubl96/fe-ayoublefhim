@@ -36,9 +36,11 @@ const Agendasingle = () => {
         description={agenda.SEO.meta_description}
         type='article'
       />
-      <article className="mt-36 prose prose-sm md:prose-base mx-auto">
-        <h1 className="text-xl">{agenda.week}</h1>
-        <ReactMarkdown>{agenda.content}</ReactMarkdown>
+      <article className="mt-36 prose prose-sm md:prose-base mx-auto dark:text-white">
+        <h1 className="text-xl dark:text-white">{agenda.week}</h1>
+        <div className="prose prose-sm md:prose-base mx-auto dark:prose-invert">
+          <ReactMarkdown>{agenda.content}</ReactMarkdown>
+        </div>
       </article>
     </>
   );

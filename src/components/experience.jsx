@@ -1,5 +1,4 @@
 import useFetch from "../hooks/useFetch";
-import React from "react";
 
 const Experience = () => {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/experiences?populate=*`;
@@ -22,7 +21,7 @@ const Experience = () => {
         return (
           <div
             key={`${job.id}-${index}`} // Changed key to be more unique
-            className="grid py-2 lg:grid-cols-12 border-b border-black"
+            className="grid py-2 lg:grid-cols-12 border-b border-slate-500"
           >
             <div className="lg:col-span-4">{job.year}</div>
             <div className="lg:col-span-6 font-semibold ">
