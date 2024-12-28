@@ -4,6 +4,12 @@ import Lastpost from "./lastpost";
 import Footer from "./footer";
 import Posts from "./posts";
 import Post from "./post";
+import Experience from "./experience";
+import Agenda from "./agendas";
+import Agenda_loop from "./agenda_loop.jsx";
+import SEO from "./meta.jsx"
+import Agendasingle from "./agenda.jsx"
+import ThemeToggle  from "./ThemeToggle.jsx";
 
 export { Navbar };
 export { Sidebar };
@@ -11,3 +17,9 @@ export { Lastpost };
 export { Footer };
 export { Posts };
 export { Post };
+export { Experience }
+export { Agenda }
+export { Agenda_loop }
+export { SEO }
+export { Agendasingle }
+export { ThemeToggle }
