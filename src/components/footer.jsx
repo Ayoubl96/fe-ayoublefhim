@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="flex justify-between mt-20 py-5 border-t  dark:text-white">
-      <p>2024 - Ayoub Lefhim</p>
+      <p>{new Date().getFullYear()} - Ayoub Lefhim</p>
       <div>
         <a href="/" className="transition hover:text-primary">
           Home
