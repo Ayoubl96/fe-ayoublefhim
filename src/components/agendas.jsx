@@ -4,26 +4,28 @@ import useFetch from "../hooks/useFetch";
 
 const Agenda = () => {
   const apiUrl = `${import.meta.env.VITE_API_URL}api/agendas?populate=*`;
-  let { loading, data, error } = useFetch(apiUrl);
+  const { loading, data, error } = useFetch(apiUrl);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message || "Something went wrong"}</p>;
 
+  // Controllo che `data.data` sia un array
   if (!data || !data.data || !Array.isArray(data.data)) {
-    return <p>No experiences found.</p>;
+    console.error("Unexpected data structure:", data);
+    return <p>No agendas found.</p>;
   }
 
-  // Ordina i dati in ordine decrescente
-  const agendas = [...data].sort((a, b) => {
-    const dateA = new Date(a.attributes.createdAt); // Modifica se la struttura è diversa
-    const dateB = new Date(b.attributes.createdAt);
-    return dateB - dateA; // Ordine decrescente
+  // Ordina i dati per `createdAt` in ordine decrescente
+  const agendas = [...data.data].sort((a, b) => {
+    const dateA = new Date(a.createdAt);
+    const dateB = new Date(b.createdAt);
+    return dateB - dateA; // Ordina in ordine decrescente
   });
 
   return (
     <section className="lastposts py-4">
       {agendas.slice(0, 5).map((agenda) => {
-        const formattedDate = formatDate(agenda.attributes.createdAt);
+        const formattedDate = formatDate(agenda.createdAt);
 
         return (
           <div
@@ -34,10 +36,10 @@ const Agenda = () => {
               {formattedDate}
             </div>
             <Link
-              to={"/agenda/" + agenda.id}
+              to={`/agenda/${agenda.id}`}
               className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1 dark:text-white"
             >
-              {agenda.attributes.week}
+              {agenda.week}
             </Link>
           </div>
         );
