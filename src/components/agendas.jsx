@@ -14,7 +14,7 @@ const Agenda = () => {
   }
 
   // Sort the agendas array in descending order based on the `createdAt` property
-  const agendas = data.data.sort((a, b) => {
+  const agendas = data.sort((a, b) => {
     const dateA = new Date(a.attributes.createdAt);
     const dateB = new Date(b.attributes.createdAt);
     return dateB - dateA; // Descending order
