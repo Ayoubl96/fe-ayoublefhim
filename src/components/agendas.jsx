@@ -13,11 +13,11 @@ const Agenda = () => {
     return <p>No experiences found.</p>;
   }
 
-  // Sort the agendas array in descending order based on the `createdAt` property
-  const agendas = data.sort((a, b) => {
-    const dateA = new Date(a.attributes.createdAt);
+  // Ordina i dati in ordine decrescente
+  const agendas = [...data.data].sort((a, b) => {
+    const dateA = new Date(a.attributes.createdAt); // Modifica se la struttura è diversa
     const dateB = new Date(b.attributes.createdAt);
-    return dateB - dateA; // Descending order
+    return dateB - dateA; // Ordine decrescente
   });
 
   return (
@@ -30,12 +30,12 @@ const Agenda = () => {
             key={agenda.id}
             className="w-full grid py-2 lg:grid-cols-12 border-b border-slate-500"
           >
-            <div className="lg:order-2 lg:col-span-3 lg:justify-self-end  dark:text-white">
+            <div className="lg:order-2 lg:col-span-3 lg:justify-self-end dark:text-white">
               {formattedDate}
             </div>
             <Link
               to={"/agenda/" + agenda.id}
-              className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1  dark:text-white"
+              className="lg:order-1 lg:col-span-9 font-semibold text-black transition hover:text-primary hover:translate-x-1 dark:text-white"
             >
               {agenda.attributes.week}
             </Link>
