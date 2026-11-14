@@ -5,3 +5,5 @@ import Agenda  from "./Agenda.jsx";
 import Agendapage from "./AgendaPage.jsx"
 
 export { Homepage, Blog, PostPage, Agenda, Agendapage };
+
+export { Privacy, Terms } from "./Legal.jsx";
